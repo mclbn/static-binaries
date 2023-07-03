@@ -1,5 +1,4 @@
-FROM andrewd/musl-cross
-MAINTAINER Andrew Dunham <andrew@du.nham.ca>
+FROM synt/musl-cross-make:latest
 
 # Add our build script
 ADD build.sh /build/build.sh
