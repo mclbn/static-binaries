@@ -4,10 +4,10 @@ set -e
 set -o pipefail
 set -x
 
-SOCAT_VERSION=1.7.3.2
-NCURSES_VERSION=6.0
-READLINE_VERSION=7.0
-OPENSSL_VERSION=1.1.0f
+SOCAT_VERSION=1.7.4.4
+NCURSES_VERSION=6.4
+READLINE_VERSION=8.2
+OPENSSL_VERSION=1.1.1s
 
 function build_ncurses() {
     cd /build
@@ -27,7 +27,7 @@ function build_readline() {
     cd /build
 
     # Download
-    curl -LO ftp://ftp.cwru.edu/pub/bash/readline-${READLINE_VERSION}.tar.gz
+    curl -LO https://ftp.gnu.org/gnu/readline/readline-${READLINE_VERSION}.tar.gz
     tar xzvf readline-${READLINE_VERSION}.tar.gz
     cd readline-${READLINE_VERSION}
 
